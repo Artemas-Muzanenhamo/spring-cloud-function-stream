@@ -14,4 +14,8 @@ public class Functions {
             return message.toUpperCase();
         };
     }
+
+    Function<String, String> reverse() {
+        return message -> new StringBuilder(message).reverse().toString();
+    }
 }

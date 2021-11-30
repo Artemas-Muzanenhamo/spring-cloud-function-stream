@@ -16,4 +16,12 @@ class FunctionsTest {
 
         assertThat(result).isEqualTo("HELLO");
     }
+
+    @Test
+    @DisplayName("Should return a string reversed given a normal string")
+    void reverseStringFunction() {
+        final String result = functions.reverse().apply("artemas");
+
+        assertThat(result).isEqualTo("sametra");
+    }
 }

@@ -7,10 +7,7 @@
 ```java
 public class Functions {
     Function<String, String> uppercase() {
-        return message -> {
-            LOGGER.info("CONVERTING STRING");
-            return message.toUpperCase();
-        };
+        return String::toUpperCase;
     }
 
     Function<String, String> reverse() {

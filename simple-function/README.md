@@ -19,6 +19,7 @@ public class Functions {
     }
 }
 
+@Test
 class Test{
     void testUpperCaseAndReverse() {
         final String result = functions.uppercase()

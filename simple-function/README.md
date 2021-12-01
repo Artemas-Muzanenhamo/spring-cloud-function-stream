@@ -13,14 +13,13 @@ public class Functions {
         };
     }
 
-
     Function<String, String> reverse() {
         return message -> new StringBuilder(message).reverse().toString();
     }
 }
 
-@Test
-class Test{
+class FunctionsTest {
+    @Test
     void testUpperCaseAndReverse() {
         final String result = functions.uppercase()
                 .andThen(functions.reverse())

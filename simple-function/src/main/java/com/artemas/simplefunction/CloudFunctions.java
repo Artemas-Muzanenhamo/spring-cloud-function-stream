@@ -2,6 +2,7 @@ package com.artemas.simplefunction;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import reactor.core.publisher.Flux;
 
 import java.util.function.Function;
 
@@ -16,5 +17,11 @@ public class CloudFunctions {
     @Bean
     Function<Message, String> reverseWithMessage() {
         return message -> new StringBuilder(message.content()).reverse().toString();
+    }
+
+    @Bean
+    Function<Flux<String>, Flux<String>> reverseFlux() {
+        return flux -> flux
+                .map(message -> new StringBuilder(message).reverse().toString());
     }
 }

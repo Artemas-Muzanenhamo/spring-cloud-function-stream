@@ -1,6 +1,7 @@
 # Spring Cloud Functions
 
 ## Java based functions
+
 * When you need to pipe functions of the same type then, Java Util Functions should suffice.
 
 ```java
